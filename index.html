@@ -1,16 +1,16 @@
-<html>
+ï»¿<html>
 <head>
-<meta charset="gb2312">
-<title>ÉúĞ¤¼ÆËãÆ÷</title>
+<meta charset="utf-8">
+<title>ç”Ÿè‚–è®¡ç®—å™¨</title>
 </head>
 <body   bgcolor=#D8D8D8  >
 <SCRIPT language=JavaScript>
-sx = new Array("×ÓÊó","³óÅ£","Òú»¢","Ã®ÍÃ","³½Áú","ËÈÉß","ÎçÂí","Î´Ñò","Éêºï","ÓÏ¼¦","Ğç¹·","º¥Öí");
+sx = new Array("å­é¼ ","ä¸‘ç‰›","å¯…è™","å¯å…”","è¾°é¾™","å·³è›‡","åˆé©¬","æœªç¾Š","ç”³çŒ´","é…‰é¸¡","æˆŒç‹—","äº¥çŒª");
 function getpet () {
 	var relation = new Array();
         var toyear = 1997;
         var birthyear = document.frm.inyear.value;
-        var birthpet="ÊäÈëÓĞÎó";
+        var birthpet="è¾“å…¥æœ‰è¯¯";
 	if (birthyear == "")
 		return;
         x = (toyear - birthyear) % 12
@@ -64,19 +64,19 @@ function getpet () {
 	document.all.description.innerHTML = "";
 	for (var i=1;i<relation.length;i++) {
 		if (i==1)
-			document.all.description.innerHTML = "Óö";
+			document.all.description.innerHTML = "é‡";
 		document.all.description.innerHTML += sx[relation[i]];
 		if (i!=relation[0]&&i!=(relation.length-1))
-			document.all.description.innerHTML += "¡¢";
+			document.all.description.innerHTML += "ã€";
 		else if (i==relation[0])
-			document.all.description.innerHTML += "´ó¼ª£¬Óö";
+			document.all.description.innerHTML += "å¤§å‰ï¼Œé‡";
 		else
-			document.all.description.innerHTML += "´óĞ×£¬ÆäËû´Î¼ª";
+			document.all.description.innerHTML += "å¤§å‡¶ï¼Œå…¶ä»–æ¬¡å‰";
 	}
 }
 </SCRIPT>
 <FORM name=frm>
-ÊäÈëÄê·İ£º<INPUT name=inyear size=4> <BR><INPUT onclick=getpet() type=button value=¿´¿´ÊôÊ²Ã´><INPUT name=birth size=9></FORM>
+è¾“å…¥å¹´ä»½ï¼š<INPUT name=inyear size=4> <BR><INPUT onclick=getpet() type=button value=çœ‹çœ‹å±ä»€ä¹ˆ><INPUT name=birth size=9></FORM>
 <div id=description></div>
 </body>
 </html>
