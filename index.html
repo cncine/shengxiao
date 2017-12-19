@@ -1,0 +1,81 @@
+<html>
+<head>
+<title>…˙–§º∆À„∆˜</title>
+</head>
+<body   bgcolor=#D8D8D8  >
+<SCRIPT language=JavaScript>
+sx = new Array("◊” Û","≥Û≈£","“˙ª¢","√ÆÕ√","≥Ω¡˙","À»…ﬂ","ŒÁ¬Ì","Œ¥—Ú","…Í∫Ô","”œº¶","–Áπ∑","∫•÷Ì");
+function getpet () {
+	var relation = new Array();
+        var toyear = 1997;
+        var birthyear = document.frm.inyear.value;
+        var birthpet=" ‰»Î”–ŒÛ";
+	if (birthyear == "")
+		return;
+        x = (toyear - birthyear) % 12
+        if ((x == 1) || (x == -11)) {
+            birthpet=sx[0];relation=[3,4,8,1,7,6,3,9];     }
+            else  {
+             if (x == 0)             {
+             birthpet=sx[1];relation=[3,0,5,9,4,6,7,10,3];           }
+             else  {
+              if ((x == 11) || (x == -1)) {
+              birthpet=sx[2];relation=[2,6,10,5,8];         }
+              else  {
+               if ((x == 10) || (x == -2)) {
+               birthpet=sx[3];relation=[3,7,10,11,0,1,4,9,6];         }
+               else  {
+                if ((x == 9) || (x == -3))  {
+                birthpet=sx[4];relation=[3,0,8,9,10,1,4,3];         }
+                else  {
+                 if ((x == 8) || (x == -4))  {
+                 birthpet=sx[5];relation=[2,1,9,2,8,11];      }
+                 else  {
+                  if ((x == 7) || (x == -5))  {
+                  birthpet=sx[6];relation=[3,2,7,10,0,1,3,6];      }
+                  else  {
+                   if ((x == 6) || (x == -6))  {
+                   birthpet=sx[7];relation=[3,3,6,11,0,1,10];      }
+                   else  {
+                    if ((x == 5) || (x == -7))  {
+                    birthpet=sx[8];relation=[2,0,4,2,5,11];     }
+                    else  {
+                     if ((x == 4) || (x == -8))  {
+                     birthpet=sx[9];relation=[3,1,4,5,3,9,10];    }
+                     else  {
+                      if ((x == 3) || (x == -9))  {
+                      birthpet=sx[10];relation=[3,2,3,6,1,4,7,9];        }
+                      else  {
+                       if ((x == 2) || (x == -10))  {
+                       birthpet=sx[11];relation=[2,7,3,5,11,8];         }
+                      }
+                     }
+                    }
+                   }
+                  }
+                 }
+                }
+               }
+              }
+             }
+            }
+        document.frm.birth.value = birthpet;  
+	document.all.description.innerHTML = "";
+	for (var i=1;i<relation.length;i++) {
+		if (i==1)
+			document.all.description.innerHTML = "”ˆ";
+		document.all.description.innerHTML += sx[relation[i]];
+		if (i!=relation[0]&&i!=(relation.length-1))
+			document.all.description.innerHTML += "°¢";
+		else if (i==relation[0])
+			document.all.description.innerHTML += "¥Ûº™£¨”ˆ";
+		else
+			document.all.description.innerHTML += "¥Û–◊£¨∆‰À˚¥Œº™";
+	}
+}
+</SCRIPT>
+<FORM name=frm>
+ ‰»ÎƒÍ∑›£∫<INPUT name=inyear size=4> <BR><INPUT onclick=getpet() type=button value=ø¥ø¥ Ù ≤√¥><INPUT name=birth size=9></FORM>
+<div id=description></div>
+</body>
+</html>
